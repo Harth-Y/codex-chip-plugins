@@ -33,3 +33,6 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Local source material copied into plugin packages
+source-skills/
