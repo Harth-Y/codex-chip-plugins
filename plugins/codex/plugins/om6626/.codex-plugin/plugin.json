@@ -1,0 +1,33 @@
+{
+  "name": "om6626",
+  "version": "0.1.0",
+  "description": "OM6626 / OnMicro OM6XXX BLE, 2.4GHz RF, low-power, flash/NV, board bring-up, and Keil SDK development expertise.",
+  "author": {
+    "name": "Harth-Y",
+    "url": "https://github.com/Harth-Y"
+  },
+  "repository": "https://github.com/Harth-Y/codex-chip-plugins",
+  "license": "MIT",
+  "keywords": [
+    "om6626",
+    "onmicro",
+    "om6xxx",
+    "ble",
+    "2.4ghz-rf",
+    "keil-sdk"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OM6626 Expert",
+    "shortDescription": "OM6626 and OnMicro OM6XXX chip development guidance.",
+    "longDescription": "Provides OM6626 / OnMicro OM6XXX BLE, 2.4GHz RF, low-power, flash/NV, board bring-up, and Keil SDK development expertise.",
+    "developerName": "Harth-Y",
+    "category": "Coding",
+    "capabilities": [
+      "Chip development",
+      "Firmware guidance",
+      "SDK troubleshooting"
+    ],
+    "websiteURL": "https://github.com/Harth-Y/codex-chip-plugins"
+  }
+}
