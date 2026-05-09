@@ -163,4 +163,5 @@ Sparse path: leave blank
 ```
 
 Read `references/marketplace-notes.md` before debugging marketplace import
-failures or deciding whether to use a sparse path.
+failures, stale plugin lists, marketplace cache issues, or deciding whether to
+use a sparse path.

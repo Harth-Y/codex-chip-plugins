@@ -105,6 +105,79 @@ C:\Users\<user>\.codex\.tmp\marketplaces\.staging\
 
 Inspect those directories to verify what Codex actually cloned.
 
+## Marketplace Cache And CLI Recovery
+
+If GitHub contains a new plugin but the Codex UI still shows the old list, check
+the local marketplace cache before changing repository files. A valid cache can
+exist while the UI still needs a reload.
+
+Check configured marketplaces:
+
+```powershell
+$lines = Get-Content "$env:USERPROFILE\.codex\config.toml"
+$lines | Select-String -Pattern "\[marketplaces\.|last_updated|last_revision|source|ref"
+```
+
+Important fields:
+
+```text
+[marketplaces.<marketplace-name>]
+last_updated = ...
+last_revision = ...
+source = ...
+ref = ...
+```
+
+Check the installed marketplace root:
+
+```powershell
+$root = "$env:USERPROFILE\.codex\.tmp\marketplaces\<marketplace-name>"
+Get-Content -Raw "$root\.agents\plugins\marketplace.json"
+Get-ChildItem -Name "$root\plugins\codex\plugins"
+```
+
+If the cache has the expected plugin but the UI does not, reload VS Code first:
+
+```text
+Developer: Reload Window
+```
+
+If reload is not enough, restart VS Code.
+
+Use Codex CLI when the UI has no remove or refresh control:
+
+```powershell
+codex plugin marketplace --help
+codex plugin marketplace remove <marketplace-name>
+codex plugin marketplace add https://github.com/<owner>/<repo>.git --ref main
+```
+
+For this style of public GitHub marketplace, re-add without `--sparse` when the
+root `.agents/plugins/marketplace.json` exists.
+
+`upgrade` may be available:
+
+```powershell
+codex plugin marketplace upgrade <marketplace-name>
+```
+
+If `upgrade` hangs, stop the orphaned `codex.exe` process that was launched for
+the upgrade, then use `remove` plus `add`. Do not terminate unrelated active
+Codex sessions unless the user explicitly approves it.
+
+After re-adding, verify:
+
+```powershell
+Get-Content -Raw "$env:USERPROFILE\.codex\.tmp\marketplaces\<marketplace-name>\.agents\plugins\marketplace.json"
+Get-ChildItem -Name "$env:USERPROFILE\.codex\.tmp\marketplaces\<marketplace-name>\plugins\codex\plugins"
+```
+
+If a marketplace appears twice in the dropdown with the same display name, it
+may be one GitHub marketplace plus one local workspace marketplace. A workspace
+containing `.agents/plugins/marketplace.json` can be shown as a local marketplace
+using the folder name as its id. Treat the GitHub id as the published source and
+the folder id as the local development copy.
+
 ## Updating Skills After Installation
 
 If a project is mid-task and a reusable skill improvement is discovered:
