@@ -1,0 +1,32 @@
+{
+  "name": "codex-plugin-builder",
+  "version": "0.1.0",
+  "description": "Guidance for creating, validating, publishing, updating, and troubleshooting Codex skills, plugins, and plugin marketplaces.",
+  "author": {
+    "name": "Harth-Y",
+    "url": "https://github.com/Harth-Y"
+  },
+  "repository": "https://github.com/Harth-Y/codex-chip-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "plugin",
+    "skill",
+    "marketplace",
+    "troubleshooting"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Plugin Builder",
+    "shortDescription": "Build Codex skills and plugin marketplaces.",
+    "longDescription": "Provides reusable workflow guidance for creating Codex skills, packaging them as plugins, publishing GitHub marketplace repositories, updating installed skills, and troubleshooting marketplace import failures.",
+    "developerName": "Harth-Y",
+    "category": "Coding",
+    "capabilities": [
+      "Plugin authoring",
+      "Skill maintenance",
+      "Marketplace troubleshooting"
+    ],
+    "websiteURL": "https://github.com/Harth-Y/codex-chip-plugins"
+  }
+}

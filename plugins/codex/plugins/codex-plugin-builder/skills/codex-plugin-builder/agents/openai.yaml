@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Plugin Builder"
+  short_description: "Build Codex skills and plugin marketplaces."
+  default_prompt: "Use $codex-plugin-builder to create or update a Codex plugin marketplace."
+
+policy:
+  allow_implicit_invocation: true

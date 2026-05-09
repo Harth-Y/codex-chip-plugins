@@ -20,3 +20,4 @@ If a Codex client supports using sparse paths as marketplace roots, use
 ## Plugins
 
 - `om6626`: OM6626 / OnMicro OM6XXX BLE, 2.4GHz RF, low-power, flash/NV, board bring-up, and Keil SDK development expertise.
+- `codex-plugin-builder`: Codex skill, plugin, marketplace publishing, updating, and troubleshooting guidance.
