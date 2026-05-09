@@ -10,7 +10,12 @@ Add this marketplace in Codex with:
 | --- | --- |
 | 来源 | `Harth-Y/codex-chip-plugins` |
 | Git 引用 | `main` |
-| 稀疏路径 | `plugins/codex` |
+| 稀疏路径 | leave blank |
+
+The marketplace also keeps a Codex marketplace layout under `plugins/codex/`.
+If a Codex client supports using sparse paths as marketplace roots, use
+`plugins/codex`; otherwise leave sparse path blank so Codex can read the root
+`.agents/plugins/marketplace.json`.
 
 ## Plugins
 
