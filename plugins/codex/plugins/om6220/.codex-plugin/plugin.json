@@ -1,0 +1,34 @@
+{
+  "name": "om6220",
+  "version": "0.1.0",
+  "description": "OM6220 / HS6220 / RW1602 2.4GHz RF, ACK/hopping, RTC/IRQ, and NY8 firmware development expertise.",
+  "author": {
+    "name": "Harth-Y",
+    "url": "https://github.com/Harth-Y"
+  },
+  "repository": "https://github.com/Harth-Y/codex-chip-plugins",
+  "license": "MIT",
+  "keywords": [
+    "om6220",
+    "hs6220",
+    "rw1602",
+    "rw1602n0p8",
+    "rw1602n2",
+    "2.4ghz-rf",
+    "ny8"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OM6220 Expert",
+    "shortDescription": "OM6220 and RW1602 2.4GHz RF firmware guidance.",
+    "longDescription": "Provides OM6220 / HS6220 / RW1602 2.4GHz RF firmware expertise for ACK/retry, 2 ms hopping protocols, NY8 SPI timing, IRQ indicator behavior, RF RTC, low-power wakeup, and logic-analyzer-based debugging.",
+    "developerName": "Harth-Y",
+    "category": "Coding",
+    "capabilities": [
+      "Chip development",
+      "RF firmware guidance",
+      "Timing troubleshooting"
+    ],
+    "websiteURL": "https://github.com/Harth-Y/codex-chip-plugins"
+  }
+}

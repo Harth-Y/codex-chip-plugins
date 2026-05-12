@@ -1,0 +1,7 @@
+interface:
+  display_name: "OM6220 Expert"
+  short_description: "OM6220/RW1602 2.4GHz RF firmware guidance."
+  default_prompt: "Use $om6220-expert for OM6220, HS6220, RW1602N0P8, or RW1602N2 RF firmware work."
+
+policy:
+  allow_implicit_invocation: true
